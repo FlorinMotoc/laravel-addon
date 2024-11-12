@@ -14,6 +14,11 @@
         "illuminate/queue": "*",
         "illuminate/support": "*"
     },
+    "suggest": {
+        "laravel/framework": "Needed for phpunit TestCase functionality",
+        "phpunit/phpunit": "Needed for phpunit TestCase functionality",
+        "guzzlehttp/guzzle": "Needed for phpunit TestCase functionality"
+    },
     "autoload": {
         "psr-4": {
             "FlorinMotoc\\LaravelAddon\\": "src"
