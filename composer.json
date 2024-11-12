@@ -1,0 +1,31 @@
+{
+    "name": "florinmotoc/laravel-addon",
+    "description": "Laravel addon",
+    "require": {
+        "php": ">=8.1",
+        "florinmotoc/php-statsd-client": "dev-main",
+        "florinmotoc/laravel-statsd": "dev-main",
+        "florinmotoc/laravel-logs": "dev-main",
+        "monolog/monolog": "*",
+        "symfony/console": "*",
+        "symfony/var-dumper": "*",
+        "illuminate/log": "*",
+        "illuminate/http": "*",
+        "illuminate/queue": "*",
+        "illuminate/support": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "FlorinMotoc\\LaravelAddon\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FlorinMotoc\\LaravelAddon\\LaravelAddonServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
