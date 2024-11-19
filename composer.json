@@ -3,9 +3,7 @@
     "description": "Laravel addon",
     "require": {
         "php": ">=8.1",
-        "florinmotoc/php-statsd-client": "dev-main",
-        "florinmotoc/laravel-statsd": "dev-main",
-        "florinmotoc/laravel-logs": "dev-main",
+        "datadog/php-datadogstatsd": "*",
         "monolog/monolog": "*",
         "symfony/console": "*",
         "symfony/var-dumper": "*",
