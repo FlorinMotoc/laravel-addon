@@ -51,8 +51,10 @@ abstract class TestCase extends LaravelTestCase
 
     private function getRootPath(): string
     {
+        $ds = DIRECTORY_SEPARATOR;
+
         // return to pre-vendor path
-        return str_replace('vendor/florinmotoc/laravel-addon/src/Tests', '', __DIR__);
+        return str_replace("vendor{$ds}florinmotoc{$ds}laravel-addon{$ds}src{$ds}Tests", '', __DIR__);
     }
 
     private function getDatabaseLocation(string $name): string
