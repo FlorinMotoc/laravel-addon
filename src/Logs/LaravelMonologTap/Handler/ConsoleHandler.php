@@ -43,7 +43,7 @@ class ConsoleHandler extends AbstractProcessingHandler
         Logger::EMERGENCY => OutputInterface::VERBOSITY_NORMAL,
     ];
 
-    public function __construct($level = Logger::DEBUG, $verbosity = null, $bubble = true, Request $request = null, ConsoleOutput $output = null)
+    public function __construct($level = Logger::DEBUG, $verbosity = null, $bubble = true, ?Request $request = null, ?ConsoleOutput $output = null)
     {
         parent::__construct($level, $bubble);
 

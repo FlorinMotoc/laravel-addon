@@ -68,7 +68,7 @@ abstract class TestCase extends LaravelTestCase
      */
     private function mockDatabase(string $dbName): void
     {
-        if (!file_exists($this->getDatabaseLocation($dbName))) {
+        if (!file_exists($this->getDatabaseLocation($dbName)) || !file_exists($this->getDatabaseLocation('init'))) {
             @unlink($this->getDatabaseLocation($dbName));
             exec('touch ' . $this->getDatabaseLocation($dbName));
             try {
