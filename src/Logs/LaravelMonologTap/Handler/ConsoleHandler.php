@@ -43,9 +43,9 @@ class ConsoleHandler extends AbstractProcessingHandler
         Logger::EMERGENCY => OutputInterface::VERBOSITY_NORMAL,
     ];
 
-    public function __construct($level = Logger::DEBUG, $verbosity = null, $bubble = true, ?Request $request = null, ?ConsoleOutput $output = null)
+    public function __construct($level = Logger::DEBUG, ?Request $request, ?ConsoleOutput $output, ?string $verbosity = null, ?bool $bubble = null)
     {
-        parent::__construct($level, $bubble);
+        parent::__construct($level, $bubble === null ? true : $bubble);
 
         $this->shouldHandle = app()->runningInConsole();
 
